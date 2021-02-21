@@ -1,9 +1,12 @@
 <ul class="">
   <% articles.each do |article| %>
     <li>
-      <%= link_to article.materialized_path, class: "py-3 block rounded-lg hover:bg-gray-50" do %>
-        <span class="text-sm text-gray-400 w-36 inline-block"><%=l article.created_at, format: "%B %e, %Y" %></span>
-        <span class="font-medium"><%= article.title %></span>
+      <%= link_to article.materialized_path, class: "py-3 block hover:bg-gray-50 -mx-4 px-4 rounded-lg" do %>
+        <div class="text-sm text-gray-400 font-medium"><%=l article.created_at, format: "%B %e, %Y" %></div>
+        <span class="font-extrabold text-lg"><%= article.title %></span>
+        <div class="text-sm ">
+          <%= strip_tags article.content(:text).truncate(150) %>
+        </div>
       <% end %>
     </li>
   <% end %>
