@@ -1,0 +1,10 @@
+<ul class="border-t border-gray-100">
+  <% articles.each do |article| %>
+    <li>
+      <%= link_to article.materialized_path, class: "py-3 block border-b border-gray-100 hover:bg-gray-50" do %>
+        <span class="text-sm text-gray-400 w-36 inline-block"><%=l article.created_at, format: "%B %e, %Y" %></span>
+        <span class="font-medium"><%= article.title %></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
