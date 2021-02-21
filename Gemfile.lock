@@ -1,5 +1,7 @@
-PATH
-  remote: ../spina
+GIT
+  remote: https://github.com/Bramjetten/Spina.git
+  revision: b88f8f48672e29108d905364c7a35872d7d31fa9
+  branch: hotwire
   specs:
     spina (2.0.0.alpha)
       ancestry
@@ -118,6 +120,10 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 5.1)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -173,8 +179,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-mini-profiler (2.3.1)
-      rack (>= 1.2.0)
     rack-rewrite (1.5.1)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -262,12 +266,11 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  hotwire-rails
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
-  rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
-  sass-rails (>= 6)
   spina!
   spring
   tailwindcss-rails

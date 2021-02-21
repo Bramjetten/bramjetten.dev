@@ -9,5 +9,9 @@ module Spina
       @nav_items ||= Spina::Navigation.find_by(name: "main").navigation_items.roots.sorted
     end
     
+    def tags
+      @tags ||= Spina::Current.page.content(:tags).to_s.split(";").map(&:strip).compact
+    end
+    
   end
 end

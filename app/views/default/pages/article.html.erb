@@ -1,0 +1,19 @@
+<div class="max-w-prose md:prose-lg flex justify-between items-center mb-3">
+  <div class="text-gray-400 font-medium text-sm">
+    <%=l current_page.created_at, format: "%B %e, %Y" %>
+  </div>
+  
+  <div class="items-center space-x-2 hidden md:flex">  
+    <% tags.each do |tag| %>
+      <div class="border border-gray-200 rounded-md p-2 py-1 text-xs text-gray-400 uppercase font-bold tracking-wider"><%= tag %></div>
+    <% end %>
+  </div>
+</div>
+
+<div class="prose md:prose-lg prose-indigo clear-right" data-controller="article">
+  <%= content.html :body %>
+</div>
+
+<script type="text/javascript">
+  document.querySelectorAll("pre").forEach((pre) => pre.classList.add('microlight'))
+</script>

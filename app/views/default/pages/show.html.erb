@@ -1,31 +1,3 @@
-<div class="max-w-prose prose-lg">
-  <div class="flex items-center space-x-2 mb-3 float-right">  
-    <div class="border border-gray-200 rounded-md p-2 py-1 text-xs text-gray-400 uppercase font-bold tracking-wider">
-      Ruby on Rails
-    </div>
-    
-    <div class="border border-gray-200 rounded-md p-2 py-1 text-xs text-gray-400 uppercase font-bold tracking-wider">
-      Hotwire
-    </div>
-    
-    <div class="border border-gray-200 rounded-md p-2 py-1 text-xs text-gray-400 uppercase font-bold tracking-wider">
-      Turbo
-    </div>
-    
-    <div class="border border-gray-200 rounded-md p-2 py-1 text-xs text-gray-400 uppercase font-bold tracking-wider">
-      Stimulus
-    </div>
-  </div>
-  
-  <div class="text-gray-400 font-medium text-sm mb-3">
-    <%=l current_page.created_at, format: "%B %e, %Y" %>
-  </div>
+<div class="prose md:prose-lg prose-indigo">
+  <%= content.html :body %>
 </div>
-
-<div class="prose prose-lg prose-indigo clear-right">
-  <%= content.html :text %>
-</div>
-
-<script type="text/javascript">
-  document.querySelectorAll("pre").forEach((pre) => pre.classList.add('microlight'))
-</script>
