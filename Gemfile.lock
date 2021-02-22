@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Bramjetten/Spina.git
-  revision: b88f8f48672e29108d905364c7a35872d7d31fa9
+  revision: 43e38a4b60bbd028849dfb43e357cc68b423ac32
   branch: hotwire
   specs:
     spina (2.0.0.alpha)
