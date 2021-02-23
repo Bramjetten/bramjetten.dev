@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Bramjetten/Spina.git
-  revision: 43e38a4b60bbd028849dfb43e357cc68b423ac32
+  revision: 753c1a54b72302a4f48817b4dbdbb0f2195d243d
   branch: hotwire
   specs:
     spina (2.0.0.alpha)
@@ -20,7 +20,7 @@ GIT
       sass-rails
       stimulus-rails
       turbo-rails
-      view_component
+      view_component (= 2.25.1)
 
 GEM
   remote: https://rubygems.org/
