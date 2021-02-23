@@ -6,8 +6,9 @@ module Spina
     # doesn't work outside the main app in 5.2.0.rc2
     def variant(image, options)
       if image.attached? && image.variable?
-        variant = image.variant(options)
-        main_app.rails_blob_representation_path(variant.blob.signed_id, variant.variation.key, variant.blob.filename)
+        # variant = image.variant(options)
+        # main_app.rails_blob_representation_path(variant.blob.signed_id, variant.variation.key, variant.blob.filename)
+        main_app.rails_public_blob_url(image.variant(options).processed)
       elsif image.image?
         # Allows SVGs to be displayed as they are not variable. Requires:
         # - https://github.com/Dreamersoul/administrate-field-active_storage/issues/36#issuecomment-608446819 to be applied
@@ -48,7 +49,7 @@ module Spina
 
     def embedded_image_url(image)
       return "" if image.nil?
-      variant(image.file, resize: Spina.config.embedded_image_size, loader: {page: nil}).processed.service_url
+      variant(image.file, resize: Spina.config.embedded_image_size, loader: {page: nil})
     end
 
   end
