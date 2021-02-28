@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Bramjetten/Spina.git
-  revision: 43e38a4b60bbd028849dfb43e357cc68b423ac32
+  revision: 900b1a1920fd91333f788c502e51c6f043d6e135
   branch: hotwire
   specs:
     spina (2.0.0.alpha)
@@ -20,7 +20,7 @@ GIT
       sass-rails
       stimulus-rails
       turbo-rails
-      view_component
+      view_component (= 2.25.1)
 
 GEM
   remote: https://rubygems.org/
@@ -182,7 +182,7 @@ GEM
     mini_magick (4.11.0)
     mini_mime (1.0.2)
     mini_portile2 (2.5.0)
-    minitest (5.14.3)
+    minitest (5.14.4)
     mobility (1.1.1)
       i18n (>= 0.6.10, < 2)
       request_store (~> 1.0)
