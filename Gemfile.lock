@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Bramjetten/Spina.git
-  revision: 900b1a1920fd91333f788c502e51c6f043d6e135
+  revision: 39fcff4a7ae1cfa1df003ce550d005b0810d71f0
   branch: hotwire
   specs:
     spina (2.0.0.alpha)
@@ -187,7 +187,7 @@ GEM
       i18n (>= 0.6.10, < 2)
       request_store (~> 1.0)
     msgpack (1.4.2)
-    nio4r (2.5.5)
+    nio4r (2.5.7)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
