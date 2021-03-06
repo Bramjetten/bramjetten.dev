@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/Bramjetten/Spina.git
-  revision: 39fcff4a7ae1cfa1df003ce550d005b0810d71f0
+  revision: bbc738ef5d03580d7f2ddc1b22af7b0a45f2595f
   branch: hotwire
   specs:
-    spina (2.0.0.alpha)
+    spina (2.0.0.beta)
       ancestry
       attr_json
       bcrypt
@@ -13,10 +13,10 @@ GIT
       image_processing
       jquery-rails
       kaminari
-      mobility (>= 1.0.0)
+      mobility (= 1.1.1)
       pg
       rack-rewrite (>= 1.5.0)
-      rails (>= 6.1)
+      rails (>= 6.0)
       sass-rails
       stimulus-rails
       turbo-rails
