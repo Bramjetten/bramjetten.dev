@@ -211,7 +211,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    spina-pro (0.1.0)
+    spina-pro (0.1.1)
       spina (>= 2.1.0)
     spring (2.1.1)
     sprockets (4.0.2)
