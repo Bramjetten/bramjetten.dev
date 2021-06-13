@@ -21,7 +21,11 @@ gem 'hotwire-rails'
 gem "aws-sdk-s3", require: false
 
 # Spina
-gem 'spina', github: 'Bramjetten/Spina', branch: 'hotwire'
+gem 'spina', github: 'SpinaCMS/Spina'
+
+source "http://gems.spinacms.com" do
+  gem 'spina-pro'
+end
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
