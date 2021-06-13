@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_21_102842) do
+ActiveRecord::Schema.define(version: 2021_06_13_172532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -195,6 +195,36 @@ ActiveRecord::Schema.define(version: 2021_02_21_102842) do
     t.index ["resource_id"], name: "index_spina_pages_on_resource_id"
   end
 
+  create_table "spina_pro_inboxes", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "label", null: false
+    t.string "forward_email"
+    t.integer "unread_count", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "spina_pro_messages", force: :cascade do |t|
+    t.integer "inbox_id"
+    t.datetime "read_at"
+    t.jsonb "content", null: false
+    t.boolean "spam", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["inbox_id"], name: "index_spina_pro_messages_on_inbox_id"
+  end
+
+  create_table "spina_pro_not_found_errors", force: :cascade do |t|
+    t.string "path", default: "/", null: false
+    t.integer "visits", default: 0, null: false
+    t.datetime "last_visited", null: false
+    t.string "request_url"
+    t.string "referer"
+    t.boolean "ignored", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "spina_resources", force: :cascade do |t|
     t.string "name", null: false
     t.string "label"
@@ -210,6 +240,7 @@ ActiveRecord::Schema.define(version: 2021_02_21_102842) do
     t.string "new_path"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean "created_manually", default: false, null: false
   end
 
   create_table "spina_settings", id: :serial, force: :cascade do |t|
