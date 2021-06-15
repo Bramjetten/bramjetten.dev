@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/SpinaCMS/Spina.git
-  revision: a2cafce89caa7aec439740cdfa0ee4962b40d0aa
+  revision: 7c07f9ec46b427d293e2e3fbac2682239bc43b2f
   specs:
     spina (2.1.0)
       ancestry
@@ -86,8 +86,8 @@ GEM
     attr_json (1.3.0)
       activerecord (>= 5.0.0, < 6.2)
     aws-eventstream (1.1.1)
-    aws-partitions (1.467.0)
-    aws-sdk-core (3.114.2)
+    aws-partitions (1.468.0)
+    aws-sdk-core (3.114.3)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
@@ -211,7 +211,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    spina-pro (0.1.2)
+    spina-pro (0.1.3)
       spina (>= 2.1.0)
     spring (2.1.1)
     sprockets (4.0.2)
@@ -227,7 +227,7 @@ GEM
       rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
-    turbo-rails (0.5.10)
+    turbo-rails (0.5.11)
       rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
