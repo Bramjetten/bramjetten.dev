@@ -15,7 +15,7 @@ module Spina
                    else
                      :resize_to_limit
                    end
-      main_app.url_for(image.variant(Hash[resize_key, Spina.config.embedded_image_size]).merge(format: :webp, saver: {quality: 70}))
+      main_app.url_for(image.variant(Hash[resize_key, Spina.config.embedded_image_size].merge(format: :webp, saver: {quality: 70})))
     end
     
     def content_type_color(image)
