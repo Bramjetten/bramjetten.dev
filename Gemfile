@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '2.7.3'
 
 # Rails
 gem 'rails', '~> 6.1.1'
@@ -21,10 +21,10 @@ gem 'hotwire-rails'
 gem "aws-sdk-s3", require: false
 
 # Spina
-gem 'spina', github: 'SpinaCMS/Spina'
+gem 'spina', '~> 2.5.0'
 
 source "http://gems.spinacms.com" do
-  gem 'spina-pro'
+  gem 'spina-pro', '~> 0.4.1'
 end
 
 group :development, :test do
@@ -34,6 +34,5 @@ end
 group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.3'
-  gem 'spring'
 end
 
