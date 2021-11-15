@@ -15,6 +15,7 @@ gem 'puma', '~> 5.0'
 
 # CSS / Javascript
 gem 'tailwindcss-rails'
+gem 'importmap-rails'
 gem 'hotwire-rails'
 
 # ActiveStorage
@@ -36,3 +37,6 @@ group :development do
   gem 'listen', '~> 3.3'
 end
 
+
+# Use Redis for Action Cable
+gem 'redis', '~> 4.0'

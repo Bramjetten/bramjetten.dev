@@ -1,5 +1,5 @@
-import { Controller } from "stimulus"
-import hljs from "highlight"
+import { Controller } from "@hotwired/stimulus"
+import hljs from "libraries/highlight"
 
 export default class extends Controller {
   
