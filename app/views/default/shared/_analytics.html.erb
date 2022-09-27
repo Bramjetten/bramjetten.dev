@@ -1,3 +1,17 @@
+<script defer data-domain="bramjetten.dev" src="https://plausible.io/js/script.manual.js"></script>
+
+<!-- define the `plausible` function to manually trigger events -->
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<!-- trigger pageviews on turbolinks navigation -->
+<script>
+document.addEventListener("turbo:load", function() {
+  plausible('pageview')
+})
+</script>
+
+
+
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6S38YJN7W"></script>
 <script>
