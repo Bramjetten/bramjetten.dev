@@ -1,20 +1,23 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.3'
+ruby '3.4.3'
 
 # Rails
-gem 'rails', '~> 6.1.1'
-gem 'bootsnap', '>= 1.4.4', require: false
+gem 'rails', '~> 7.2'
+gem 'bootsnap', '>= 1.18.4', require: false
 
 # Postgres
-gem 'pg', '~> 1.1'
+gem 'pg', '~> 1.5'
 
 # Server
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 6.0'
+
+# Use Redis for Action Cable
+gem 'redis', '~> 5.4'
 
 # CSS / Javascript
-gem 'tailwindcss-rails'
+gem 'tailwindcss-rails', "~> 3.3.1"
 gem 'importmap-rails'
 gem 'hotwire-rails'
 
@@ -22,10 +25,10 @@ gem 'hotwire-rails'
 gem "aws-sdk-s3", require: false
 
 # Spina
-gem 'spina', '~> 2.5.0'
+gem 'spina', '~> 2.19.0'
 
 source "http://gems.spinacms.com" do
-  gem 'spina-pro', '~> 0.4.1'
+  gem 'spina-pro', '~> 0.12.0'
 end
 
 group :development, :test do
@@ -37,6 +40,3 @@ group :development do
   gem 'listen', '~> 3.3'
 end
 
-
-# Use Redis for Action Cable
-gem 'redis', '~> 4.0'
